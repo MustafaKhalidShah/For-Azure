@@ -23,7 +23,7 @@ const Instruments = () => {
     // Fetch the data from the database
     const fetchData = async () => {
       const response = await fetch(
-        `http://localhost:3001/db/instruments?page=${currentPage}`
+        `api/db/instruments?page=${currentPage}`
       );
       const data = await response.json();
       setInstruments(data[0]);
