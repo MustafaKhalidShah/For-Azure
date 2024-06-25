@@ -23,7 +23,7 @@ const Instruments = () => {
     // Fetch the data from the database
     const fetchData = async () => {
       const response = await fetch(
-        `http://bsdinstrumentv3.azurewebsites.net/db/instruments?page=${currentPage}`
+        `http://bsdinstrumentv3.azurewebsites.net/api/instruments?page=${currentPage}`
       );
       const data = await response.json();
       setInstruments(data[0]);
