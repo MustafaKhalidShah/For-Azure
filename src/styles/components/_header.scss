@@ -1,0 +1,61 @@
+// This file contains the styles for the header component
+
+// General styling for the header
+.dashboard-header {
+  display: grid;
+  grid-template-columns: 5fr auto auto 0.5fr;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  // Styling for the logo
+  & > .bsd-logo {
+    max-width: 200px;
+  }
+
+  // Styling for the account name section
+  & > .account-name {
+    display: flex;
+    flex-direction: row-reverse;
+    grid-column: 2;
+
+    // Styling for the account name
+    & > p {
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-align: right;
+      color: var(--body_text-color);
+    }
+  }
+
+  // Styling for the logout button
+  & > .logout-btn {
+    // General styling
+    grid-column: 4;
+    background: var(--primary_color);
+    border: 1px solid var(--button_border_color_alt);
+    color: var(--body_text-hover-color);
+    max-width: fit-content;
+
+    // Styling for when the button is focused
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    // Styling for the logout button hover effect
+    &:hover {
+      background: var(--button_accent_color);
+      border: 1px solid var(--button_border_color_alt);
+      color: var(--body_alt_text-color);
+    }
+
+    // Responsive styling
+    @media (min-width: 768px) {
+      justify-self: center;
+    }
+    @media (min-width: 1024px) {
+      justify-self: right;
+    }
+  }
+}

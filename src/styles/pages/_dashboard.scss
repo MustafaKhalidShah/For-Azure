@@ -1,0 +1,11 @@
+// This file contains the styling for the dashboard home page
+
+.dashboard-content {
+  // General styling
+  background-color: var(--bg_alt_color);
+  color: var(--body_text-color);
+  font-family: var(--font-stack);
+  font-weight: normal;
+  font-size: var(--base-font-size);
+  margin: 0;
+}

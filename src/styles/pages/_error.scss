@@ -1,0 +1,48 @@
+// This file contains the styling for the error page
+
+// Styling for the error wrapper
+.error-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+
+  // Styling for the error title
+  & > h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--body_alt_text-color);
+  }
+
+  // Styling for the error message
+  & > p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--body_text-color);
+  }
+
+  // Styling for the return button
+  & > a {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--body_alt_text-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+
+    & > .return-btn {
+      // Styling for when the button is focused
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      // Styling for when the button is hovered
+      &:hover {
+        background-color: var(--button_border_hover_color);
+        color: var(--body_text-hover-color);
+      }
+    }
+  }
+}

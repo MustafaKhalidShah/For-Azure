@@ -1,0 +1,126 @@
+// This file contains the styling for the form component
+
+// General styling for the form wrapper
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  // Styling for the bottom buttons
+  // Styling for the buttons at the bottom
+  & > .back-btn,
+  .discard-btn,
+  .save-btn {
+    height: 100%;
+    max-width: fit-content;
+    font-size: 1rem;
+    font-weight: 500;
+
+    // Styling for when the button is focused
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    // Styling for the back button hover effect
+    &:hover {
+      background: var(--primary_color);
+      color: var(--body_text-hover-color);
+    }
+  }
+
+  // Styling for the back button
+  & > .back-btn {
+    align-self: flex-start;
+  }
+
+  // Styling for the discard & save button
+  & > .bottom-btns {
+    display: flex;
+    align-self: flex-end;
+    gap: 0.5rem;
+  }
+}
+
+// Styling for the form
+.info-form > .form-group {
+  // Styling for the form input
+  & > input {
+    width: 95%;
+  }
+
+  // Styling for the dropdown button
+  & > .dropdown > button {
+    // General styling
+    padding: 0.2rem 0.5rem 0;
+    font-size: 1rem;
+    background: var(--primary_color);
+    border: 1px solid var(--button_border_color_alt);
+    color: var(--body_text-hover-color);
+
+    // Styling for when the button is focused
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    // Styling for the button hover effect
+    &:hover {
+      background: var(--button_accent_color);
+      color: var(--body_alt_text-color);
+    }
+  }
+
+  // Hide dropdown menu by default
+  & > .dropdown > .dropdown-menu {
+    display: none;
+  }
+
+  // Styling for the dropdown menu
+  & > .show.dropdown > .dropdown-menu.show {
+    // General styling
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.3rem 0.5rem;
+    background: var(--primary_color);
+    border-radius: 0.5rem;
+
+    // Styling for the dropdown menu items
+    & > .dropdown-item {
+      // General styling
+      padding: 0.2rem 0.5rem;
+      font-size: 1rem;
+      text-decoration: none;
+      color: var(--body_text-hover-color);
+      border: 1px solid var(--button_border_color_alt);
+      border-radius: 0.5rem;
+
+      // Styling for when the button is focused
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      // Styling for the button hover effect
+      &:hover {
+        background: var(--button_accent_color);
+        color: var(--body_alt_text-color);
+      }
+    }
+  }
+
+  // Styling for the input button
+  .upload-btn {
+    // General styling
+    margin-top: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    font-size: 1rem;
+    background: var(--primary_color);
+    border: 1px solid var(--button_border_color_alt);
+    color: var(--body_text-hover-color);
+
+    // Styling for when the button is focused
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    // Styling for the button hover effect
+    &:hover {
+      background: var(--button_accent_color);
+      color: var(--body_alt_text-color);
+    }
+  }
+}

@@ -1,0 +1,99 @@
+// This file contains the styling for the navigation button on the dashboard home screen
+
+// General styling for the navigation wrapper
+.nav-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-between;
+  justify-items: center;
+  align-content: space-around;
+  align-items: start;
+  padding: 1.7rem 0 0 3rem;
+  min-height: 80vh;
+  max-width: 85vw;
+
+  // Dividing sections
+  & > section {
+    display: grid;
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .nav-instruments {
+    grid-column: 1 / 2;
+    margin-left: 3em;
+  }
+
+  .nav-reports {
+    grid-column: 3 / 4;
+    margin-right: 3em;
+  }
+
+  // Styling for the link buttons
+  & > .nav-instruments > a,
+  .nav-services > a,
+  .nav-reports > a {
+    display: grid;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+  }
+
+  // Styling for the heading buttons
+  & > .nav-instruments > .instruments-link > .instruments-btn,
+  .nav-services > .services-link > .services-btn,
+  .nav-reports > .reports-btn {
+    // General styling
+    background: var(--button_accent_color);
+    border: 1px solid var(--button_border_color);
+    color: var(--body_alt_text-color);
+    font-weight: bold;
+  }
+
+  & > .nav-instruments > .instruments-link > .instruments-btn,
+  .nav-services > .services-link > .services-btn {
+    // Styling for when the button is focused
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    // Styling for the navigation button hover effect
+    &:hover {
+      background: var(--button_gradient_top_color_hover);
+      border: 1px solid var(--button_border_color);
+      color: var(--body_text-hover-color);
+    }
+  }
+
+  // Styling for the navigation button
+  & > .nav-instruments > a > button,
+  .nav-services > a > button,
+  .nav-services > button,
+  .nav-reports > a > button {
+    // General styling
+    background: var(--primary_color);
+    border: 1px solid var(--button_border_color_alt);
+    color: var(--body_text-hover-color);
+
+    // Styling for when the button is focused
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    // Styling for the navigation button hover effect
+    &:hover {
+      background: var(--button_accent_color);
+      color: var(--body_alt_text-color);
+    }
+  }
+
+  // Styling for the disabled account management button
+  & > .account-mngmt-btn {
+    cursor: not-allowed;
+    background: var(--field_unfocused_color);
+    border: 1px solid var(--button_border_color);
+    color: var(--body_text-hover-color);
+    margin-top: auto;
+    max-width: 65%;
+  }
+}

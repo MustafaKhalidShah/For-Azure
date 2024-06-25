@@ -1,0 +1,179 @@
+// This file contains the styling for the reports page
+
+// Styling for the reports wrapper
+.report-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+
+  // Styling for the header
+  & > h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  // Styling for the report viewing section
+  & > .report-section {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  // Styling for the report options buttons
+  & > .report-section > .report-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 20%;
+    margin-bottom: 10px;
+
+    // Styling for the report options button
+    & > button {
+      // General styling
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      background: var(--primary_color);
+      border: 1px solid var(--button_border_color_alt);
+      color: var(--body_text-hover-color);
+
+      // Styling for when the button is focused
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      // Styling for the report options button hover effect
+      &:hover {
+        background: var(--button_accent_color);
+        color: var(--body_alt_text-color);
+      }
+    }
+  }
+
+  // Styling for the report preview
+  .report-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 80%;
+    margin-bottom: 10px;
+
+    // Styling for the pdf container
+    & > .pdf-container {
+      // General styling
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 100%;
+      height: 100%;
+
+      // Styling for the pdf document
+      & > .react-pdf__Document {
+        // General styling
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 90vw;
+        max-height: fit-content;
+
+        // Styling for the pagination buttons
+        & > .pagination-container > button {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          background: none;
+
+          // Styling for when the button is focused and hovered
+          &:focus,
+          &:hover {
+            cursor: pointer;
+            border: 1px solid var(--button_border_color_alt);
+          }
+
+          // Responsive styling
+          @media (min-width: 768px) {
+            width: 50px;
+            height: 30px;
+          }
+          @media (min-width: 1024px) {
+            width: 50px;
+            height: 30px;
+          }
+        }
+
+        // Styling for the pdf page
+        & > .react-pdf__Page {
+          // General styling
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          max-width: 90vw;
+          max-height: fit-content;
+        }
+      }
+    }
+  }
+
+  // Styling for the bottom actions
+  & > .bottom-actions {
+    // General styling
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    gap: 1rem;
+    margin-bottom: 10px;
+
+    // Styling for the back button
+    & > .back-btn {
+      // General styling
+      height: 100%;
+      max-width: fit-content;
+      align-self: flex-start;
+      font-size: 1rem;
+      font-weight: 500;
+
+      // Styling for when the button is focused
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      // Styling for the back button hover effect
+      &:hover {
+        background: var(--primary_color);
+        color: var(--body_text-hover-color);
+      }
+    }
+
+    // Remove text underline
+    & > a {
+      text-decoration: none;
+    }
+
+    // Styling for the generate button
+    & > a > .generate-btn {
+      // General styling
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      background: var(--primary_color);
+      border: 1px solid var(--button_border_color_alt);
+      color: var(--body_text-hover-color);
+
+      // Styling for when the button is focused
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      // Styling for the bottom action button hover effect
+      &:hover {
+        background: var(--button_accent_color);
+        color: var(--body_alt_text-color);
+      }
+    }
+  }
+}

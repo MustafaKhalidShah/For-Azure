@@ -1,0 +1,181 @@
+// This file contains the styling for the pagination component
+
+// Styling for the pagination container
+.pagination-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #767676;
+
+  // Responsive styling
+  @media (min-width: 768px) {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    border-radius: 0.25rem;
+  }
+  @media (min-width: 1024px) {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    border-radius: 0.25rem;
+  }
+}
+
+// Styling for the start & previous buttons
+.start-prev-btns {
+  display: flex;
+  flex-direction: row;
+
+  & > .start-btn,
+  & > .prev-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: none;
+
+    // Styling for when the button is focused and hovered
+    &:focus,
+    &:hover {
+      cursor: pointer;
+      border: 1px solid var(--button_border_color_alt);
+    }
+
+    // Responsive styling
+    @media (min-width: 768px) {
+      width: 50px;
+      height: 30px;
+    }
+    @media (min-width: 1024px) {
+      width: 50px;
+      height: 30px;
+    }
+  }
+
+  // Styling for the start button
+  & > .start-btn {
+    // Styling for the icon
+    & > .material-symbols-outlined {
+      font-size: 30px;
+    }
+  }
+}
+
+// Styling for the ellipsis
+.ellipsis {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 30px;
+  font-size: 20px;
+}
+
+// Styling for the page number buttons
+.minus-two,
+.minus-one,
+.first-page-unfocused,
+.first-page-focused,
+.current,
+.plus-one,
+.plus-two {
+  background: none;
+  font-size: 20px;
+
+  // Styling for when the button is focused and hovered
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    border: 1px solid var(--button_border_color_alt);
+  }
+}
+
+.minus-two,
+.minus-one,
+.first-page-unfocused {
+  // Responsive styling
+  @media (min-width: 768px) {
+    width: 3.9rem;
+    height: 50px;
+  }
+  @media (min-width: 1024px) {
+    width: 3.9rem;
+    height: 50px;
+  }
+}
+
+.current,
+.first-page-focused {
+  color: var(--body_text-hover-color);
+  background: var(--primary_color);
+
+  align-content: start;
+
+  // Responsive styling
+  @media (min-width: 768px) {
+    width: 3.9rem;
+    height: 50px;
+  }
+  @media (min-width: 1024px) {
+    width: 3.9rem;
+    height: 50px;
+  }
+}
+
+.plus-one,
+.plus-two {
+  // Responsive styling
+  @media (min-width: 768px) {
+    width: 3.9rem;
+    height: 50px;
+  }
+  @media (min-width: 1024px) {
+    width: 3.9rem;
+    height: 50px;
+  }
+}
+
+// Styling for the next & end buttons
+.next-btn,
+.end-btn {
+  // General styling
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: none;
+
+  // Styling for when the button is focused and hovered
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    border: 1px solid var(--button_border_color_alt);
+  }
+
+  // Responsive styling
+  @media (min-width: 768px) {
+    width: 50px;
+    height: 30px;
+  }
+  @media (min-width: 1024px) {
+    width: 50px;
+    height: 30px;
+  }
+}
+
+.end-btn {
+  // Styling for the icon
+  & > .material-symbols-outlined {
+    font-size: 30px;
+  }
+}

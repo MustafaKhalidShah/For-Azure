@@ -1,0 +1,61 @@
+// This file contains the styling for the instruments table page
+
+// Styling for the content wrapper
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  min-height: 85vh;
+  max-width: 95vw;
+  margin: 2em auto 1em;
+  background: rgb(255, 255, 255);
+  box-shadow: 20px 20px 10px 1px rgba(0, 0, 0, 0.1);
+
+  // Styling for the header
+  & > h1 {
+    font-size: 1.5rem;
+    color: var(--body_text-color);
+  }
+
+  // Styling for the bottom row
+  & > .bottom-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    // Styling for the buttons at the bottom
+    & > .back-btn,
+    .discard-btn,
+    .save-btn {
+      height: 100%;
+      max-width: fit-content;
+      font-size: 1rem;
+      font-weight: 500;
+
+      // Styling for when the button is focused
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      // Styling for the back button hover effect
+      &:hover {
+        background: var(--primary_color);
+        color: var(--body_text-hover-color);
+      }
+    }
+
+    // Styling for the back button
+    & > .back-btn {
+      align-self: flex-start;
+    }
+
+    // Styling for the discard & save button
+    & > .bottom-btns {
+      display: flex;
+      align-self: flex-end;
+      gap: 0.5rem;
+    }
+  }
+}

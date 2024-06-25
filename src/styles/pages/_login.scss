@@ -1,0 +1,87 @@
+// This file contains the styling for the login page
+
+// Styling for the login wrapper
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--bg_color);
+}
+
+// Styling for the login form
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--content-bg-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+// Styling for the form header
+.login-header {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+// Styling for the form input fields
+.form-group {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  // Styling for the form labels
+  & > label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  // Styling for the form input fields
+  & > input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid var(--field_unfocused_color);
+    font-size: 14px;
+  }
+
+  // Styling for the form input fields when they are focused
+  & > input:focus {
+    outline: none;
+    border-bottom: 1px solid var(--primary_color-85a);
+  }
+
+  // Styling for the form input fields when they are invalid
+  & > input:invalid {
+    border: 1px solid var(--primary_color);
+    border-radius: 5px;
+  }
+
+  // Styling for the error message
+  & > .error {
+    color: var(--primary_color);
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}
+
+// Add hover effect to the submit button
+.submit-btn {
+  // Initial styling
+  background: var(--button_accent_color);
+  border: 1px solid var(--button_border_color_alt);
+  color: var(--body_alt_text-color);
+
+  // Hover effect
+  cursor: pointer;
+  transition: background 0.3s;
+  &:hover {
+    background: var(--primary_color);
+    color: var(--body_text-hover-color);
+  }
+}

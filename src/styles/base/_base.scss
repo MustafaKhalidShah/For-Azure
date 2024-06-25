@@ -1,0 +1,61 @@
+// This file contains the global styling for the application
+
+// Font config
+// Font stack
+$font-stack: ("Rubik", "Arial", "Helvetica", "sans-serif");
+// Font size
+$base-font-size: 18;
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--bg_alt_color);
+}
+
+body {
+  margin: 0;
+  font-family: $font-stack;
+  font-weight: normal;
+  color: var(--body_text-color);
+  background-color: var(--bg_alt_color);
+  background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  font-weight: bold;
+}
+
+button {
+  // Colours
+  border: var(--button_border_color);
+
+  // Paddings
+  padding-left: var(--button_padding-left);
+  padding-right: var(--button_padding-right);
+  padding-top: var(--button_padding-top);
+  padding-bottom: var(--button_padding-bottom);
+
+  // Border radius
+  border-top-left-radius: var(--button-border-radius-top-left);
+  border-top-right-radius: var(--button-border-radius-top-right);
+  border-bottom-right-radius: var(--button-border-radius-bottom-right);
+  border-bottom-left-radius: var(--button-border-radius-bottom-left);
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  color: inherit;
+}

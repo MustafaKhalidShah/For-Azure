@@ -1,0 +1,67 @@
+// This file contains the default theme and colours for the app
+// Copied from the company's main website
+
+html {
+  // Font config
+  --font-stack: ("Rubik", "Arial", "Helvetica", "sans-serif");
+  --base-font-size: 18;
+  // Primary colours
+  --primary_color: #ee3425;
+  --primary_color-85a: rgba(238, 52, 37, 0.85);
+  --primary_color-7a: rgba(238, 52, 37, 0.7);
+  --primary_color-5a: rgba(238, 52, 37, 0.5);
+  --primary_color-35a: rgba(238, 52, 37, 0.35);
+  --primary_color-2a: rgba(238, 52, 37, 0.2);
+
+  // Background colours
+  --bg_color: #eaeaea;
+  --bg_alt_color: rgba(166, 166, 166, 255);
+  --content-bg-color: #fff;
+
+  // Link colours
+  --link_color: #212934;
+  --link_color-8a: rgba(33, 41, 52, 0.8);
+  --link_hover_color: #ee3425;
+  --link_hover_color-85a: rgba(238, 52, 37, 0.85);
+  --link_hover_color-7a: rgba(238, 52, 37, 0.7);
+  --link_hover_color-5a: rgba(238, 52, 37, 0.5);
+  --link_hover_color-35a: rgba(238, 52, 37, 0.35);
+  --link_hover_color-2a: rgba(238, 52, 37, 0.2);
+
+  // Text colours
+  --body_text-color: #4a4e57;
+  --body_alt_text-color: #ed3126;
+  --body_text-hover-color: rgb(255, 255, 255);
+  --h1_text-color: #fff;
+  --h2_text-color: #000;
+  --h3_text-color: #ed3126;
+  --h4_text-color: #ed3126;
+  --h5_text-color: #484848;
+  --h6_text-color: #484848;
+
+  // Field colours
+  --field_unfocused_color: #212934;
+
+  // Button colours
+  --button_accent_color: #ffffff;
+  --button_border_color: #484848;
+  --button_border_color_alt: #ed3126;
+  --button_accent_hover_color: #ffffff;
+  --button_border_hover_color: #ed3126;
+  --button_gradient_top_color: #484848;
+  --button_gradient_bottom_color: #484848;
+  --button_gradient_top_color_hover: #ed3126;
+  --button_gradient_bottom_color_hover: #ed3126;
+
+  // Button paddings
+  --button_padding-top: 10px;
+  --button_padding-bottom: 10px;
+  --button_padding-left: 26px;
+  --button_padding-right: 26px;
+
+  // Button border radius
+  --button-border-radius-top-left: 26px;
+  --button-border-radius-top-right: 26px;
+  --button-border-radius-bottom-right: 26px;
+  --button-border-radius-bottom-left: 26px;
+}
