@@ -20,7 +20,7 @@ const CaseType = () => {
     // Fetch the data from the database
     const fetchData = async () => {
       const response = await fetch(
-        `http://localhost:3001/db/caseTypes?page=${currentPage}`
+        `/api/caseTypes?page=${currentPage}`
       );
       const data = await response.json();
       setCaseTypes(data[0]);

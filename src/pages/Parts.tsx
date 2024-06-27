@@ -19,7 +19,7 @@ const Parts = () => {
     // Fetch the data from the database
     const fetchData = async () => {
       const response = await fetch(
-        `http://localhost:3001/db/parts?page=${currentPage}`
+        `/api/parts?page=${currentPage}`
       );
       const data = await response.json();
       setParts(data[0]);

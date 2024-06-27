@@ -20,7 +20,7 @@ const Build = () => {
     // Fetch the data from the database
     const fetchData = async () => {
       const response = await fetch(
-        `http://localhost:3001/db/builds?page=${currentPage}`
+        `/api/builds?page=${currentPage}`
       );
       const data = await response.json();
       setBuilds(data[0]);

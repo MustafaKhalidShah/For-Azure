@@ -20,7 +20,7 @@ const PartType = () => {
     // Fetch the data from the database
     const fetchData = async () => {
       const response = await fetch(
-        `http://localhost:3001/db/partTypes?page=${currentPage}`
+        `/api/partTypes?page=${currentPage}`
       );
       const data = await response.json();
       setPartTypes(data[0]);

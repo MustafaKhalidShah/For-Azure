@@ -20,7 +20,7 @@ const BOM = () => {
     // Fetch the data from the database
     const fetchData = async () => {
       const response = await fetch(
-        `http://localhost:3001/db/boms?page=${currentPage}`
+        `/api/boms?page=${currentPage}`
       );
       const data = await response.json();
       setBOMs(data[0]);

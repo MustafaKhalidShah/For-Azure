@@ -20,7 +20,7 @@ const Model = () => {
     // Fetch the data from the database
     const fetchData = async () => {
       const response = await fetch(
-        `http://localhost:3001/db/models?page=${currentPage}`
+        `/api/models?page=${currentPage}`
       );
       const data = await response.json();
       setModels(data[0]);
