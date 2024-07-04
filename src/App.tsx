@@ -9,7 +9,6 @@ import "./styles/main.css";
 import Root from "./pages/Root";
 import ErrorPage from "./pages/ErrorPage";
 import DBError from "./pages/DBError";
-import Login from "/.auth/login/aad";
 import Dashboard from "./pages/Dashboard";
 import Navigation from "./pages/Navigation";
 import Instruments from "./pages/Instruments";
@@ -36,7 +35,7 @@ const router = createBrowserRouter([
   },
   {
     path: "login",
-    element: <Login />,
+    element: "/.auth/login/aad",
     errorElement: <ErrorPage />,
   },
   {
