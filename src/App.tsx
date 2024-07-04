@@ -1,6 +1,6 @@
 // Imports
 // Libraries
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 
 // Styles
 import "./styles/main.css";
@@ -29,7 +29,7 @@ import Reports from "./pages/Reports";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <Navigate to="/dashboard" replace />,
     errorElement: <ErrorPage />,
     children: [{ path: "dbError", element: <DBError /> }],
   },

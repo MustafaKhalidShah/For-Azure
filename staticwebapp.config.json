@@ -7,8 +7,15 @@
             "openIdIssuer": "https://login.microsoftonline.com/d5c16177-1116-4dd4-8f4f-3e83cca982ed",
             "clientIdSettingName": "AZURE_CLIENT_ID",
             "clientSecretSettingName": "AZURE_CLIENT_SECRET"
-          }
+          },
+          "login" : {"redirectUri":"/"}, "logout" : {"redirectUri":"/"}
         }
       }
-    }
+    },
+    "routes": [
+      {
+        "route": "/",
+        "allowedRoles": ["authenticated"]
+      }
+    ]
   }
