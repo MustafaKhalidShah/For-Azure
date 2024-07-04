@@ -24,6 +24,7 @@ import ServiceType from "./pages/ServiceType";
 import PartType from "./pages/PartType";
 import CreateEdit from "./pages/CreateEdit";
 import Reports from "./pages/Reports";
+const Login = "/.auth/login/aad";
 
 // Function to create routes
 const router = createBrowserRouter([
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
   },
   {
     path: "login",
-    element: "/.auth/login/aad",
+    element: <Login />,
     errorElement: <ErrorPage />,
   },
   {
