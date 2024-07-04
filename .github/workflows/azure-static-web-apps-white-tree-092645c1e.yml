@@ -19,18 +19,43 @@ jobs:
         with:
           submodules: true
           lfs: false
+
+      - name: Cache node modules
+        uses: actions/cache@v3
+        id: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
           node-version: '16.x'
-
+      
       - name: Install dependencies
-        run: npm install
+        run: npm ci
         working-directory: ./
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
 
       - name: Build
         run: npm run build
         working-directory: ./
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+      
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: ./build
+
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: ./build
+        if: steps.cache-node-modules.outputs.cache-hit == 'true'
       
       - name: Build And Deploy
         id: builddeploy
