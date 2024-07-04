@@ -42,7 +42,7 @@ const Root = () => {
         localStorage.getItem("loggedIn") ? (
           <Navigate to="/dashboard" />
         ) : (
-          <Navigate to="/login" />
+          <Navigate to="../.auth/login/aad" /> // use microsoft entra instead of built in function
         )
       }
     </div>
